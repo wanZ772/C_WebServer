@@ -5,15 +5,23 @@ Content-type: text/html
     <head>
         <!-- <script src="functions.js"></script> -->
         <title>C Webserver</title>
-        <!-- <script>
-            function load_seats()   {
-                alert(1);
+        
+        <script>
+            xmlHttp = new XMLHttpRequest();
+            
+            function update_location()  {
+                set_location = document.getElementById("current_location").value;
+                set_location = set_location.replace(" ", "_");
+                xmlHttp.open("GET", window.location.href + "/update_location?location=" + set_location.toUpperCase(), false);
+                xmlHttp.send(null);
+                return xmlHttp.responseText;
             }
-        </script> -->
+        </script>
     </head>
     <body>
         <h1>This Web Server Was Written in C!</h1>
         <h3>-Developed by Syntax Error</h3>
-        <div id="seats"></div>
+        <input id="current_location"></input>
+        <button onclick="update_location()">Update location</button>
     </body>
 </html>
