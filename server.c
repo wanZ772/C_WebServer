@@ -7,7 +7,7 @@
 
 // #pragma comment(lib, "Ws2_32.lib")
 
-#define SERVER_PORT 80
+#define SERVER_PORT 8080
 #define BUFFER_SIZE 1024
 #define CURRENT_LOCATION_FILE "../bus_reservation_system/database/location.log"
 
